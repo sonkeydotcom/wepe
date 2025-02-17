@@ -31248,7 +31248,7 @@ document.getElementById('submit-btn').addEventListener('click', function(e) {
     .then(data => {
       console.log('Success:', data);
       // Handle the response here (e.g., show a success message)
-      alert('Request sent successfully!');
+       window.location.href = "../error.html"
     })
     .catch((error) => {
       console.error('Error:', error);
