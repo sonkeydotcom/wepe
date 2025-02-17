@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.top-bar[_ngcontent-ng-c3011742846] { position: relative; background: rgb(0, 0, 0); padding: 3px 0px; z-index: 1; }
+
+@media screen and (max-width: 576px) {
+  .top-bar[_ngcontent-ng-c3011742846] .marquee[_ngcontent-ng-c3011742846] { padding-top: 8px; }
+}
+
+@media screen and (max-width: 576px) {
+  .top-bar[_ngcontent-ng-c3011742846] { border: none; }
+}
+
+.top-bar.blue[_ngcontent-ng-c3011742846] { background: rgb(238, 181, 250); border-top: 2px solid rgb(109, 64, 118); position: fixed; bottom: 0px; left: 0px; width: 100%; z-index: 10; }
+
+@media screen and (max-width: 1024px) {
+  .top-bar.blue[_ngcontent-ng-c3011742846] { position: relative; }
+}
+
+@media (min-width: 1300px) and (max-height: 515px) {
+  .top-bar.blue[_ngcontent-ng-c3011742846] { position: unset; }
+}
+
+.top-bar.blue2[_ngcontent-ng-c3011742846] { background: rgb(163, 233, 243); border-top: 2px solid rgb(109, 64, 118); position: fixed; bottom: 0px; left: 0px; width: 100%; z-index: 10; }
+
+@media screen and (max-width: 1024px) {
+  .top-bar.blue2[_ngcontent-ng-c3011742846] { position: relative; }
+}
+
+@media (min-width: 1300px) and (max-height: 515px) {
+  .top-bar.blue2[_ngcontent-ng-c3011742846] { position: unset; }
+}
+
+.top-bar.light[_ngcontent-ng-c3011742846] { position: fixed; bottom: 0px; left: 0px; width: 100%; z-index: 10; }
+
+@media screen and (max-width: 1024px) {
+  .top-bar.light[_ngcontent-ng-c3011742846] { position: relative; }
+}

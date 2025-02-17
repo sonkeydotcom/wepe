@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.header[_ngcontent-ng-c1920592042] { position: fixed; left: 0px; top: 0px; width: 100%; z-index: 5; background: rgb(255, 255, 255); height: 102px; }
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] { background: rgb(255, 255, 255); z-index: 15; }
+}
+
+@media screen and (max-width: 1024px) {
+  .header[_ngcontent-ng-c1920592042] { height: 65px; }
+}
+
+.header.scrolled[_ngcontent-ng-c1920592042] { top: 0px; background: rgb(222, 203, 224); box-shadow: rgba(0, 0, 0, 0) 0px 4px 8px, rgba(0, 0, 0, 0.12) 0px 6px 20px; }
+
+@media screen and (max-width: 576px) {
+  .header.scrolled[_ngcontent-ng-c1920592042] { background: rgb(255, 255, 255); }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .header[_ngcontent-ng-c1920592042] .container[_ngcontent-ng-c1920592042] { max-width: 1680px; }
+}
+
+.header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] { padding: 5px 0px; }
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] { padding: 5px 12px; }
+}
+
+.header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042] { position: relative; color: rgb(0, 0, 0); cursor: pointer; text-decoration: none; text-transform: capitalize; font-weight: 600; letter-spacing: 1px; font-family: FuzzyBubbles, sans-serif; font-size: 18px; padding: 13px 0px; margin: 0px 20px; opacity: 0.6; }
+
+.header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042]:first-child { margin-left: 0px; }
+
+@media screen and (max-width: 1399px) {
+  .header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042] { font-size: 17px; margin: 0px 10px; }
+}
+
+.header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] a.active[_ngcontent-ng-c1920592042], .header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042]:hover { color: rgb(0, 0, 0); opacity: 1; }
+
+.header[_ngcontent-ng-c1920592042] .menu-item[_ngcontent-ng-c1920592042] a.active[_ngcontent-ng-c1920592042]::after { content: ""; display: block; width: 100%; height: 13px; background: url("/assets/images/faq-line.png") 0px 0px repeat-x; position: absolute; left: 0px; right: 0px; margin: 0px auto; bottom: 0px; }
+
+.header[_ngcontent-ng-c1920592042] .cursor-auto[_ngcontent-ng-c1920592042] { cursor: auto !important; }
+
+.header[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] { text-decoration: none; letter-spacing: 0.02em; text-transform: capitalize; font-weight: 400; padding: 0.3rem 1rem; border-radius: 16px; }
+
+.header[_ngcontent-ng-c1920592042] .language.show[_ngcontent-ng-c1920592042] .dropdown[_ngcontent-ng-c1920592042] { rotate: 180deg; }
+
+.header[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] .dropdown-toggle[_ngcontent-ng-c1920592042] { margin: 0px auto; width: unset !important; }
+
+.header[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] .dropdown-toggle[_ngcontent-ng-c1920592042]::after { display: none !important; }
+
+.header[_ngcontent-ng-c1920592042] .menu-dropdown[_ngcontent-ng-c1920592042] { padding: 10px 0px; color: rgb(0, 0, 0); cursor: pointer; text-decoration: none; text-transform: capitalize; font-weight: 400; letter-spacing: 1px; font-size: 14px; width: auto; }
+
+.header[_ngcontent-ng-c1920592042] .menu-dropdown.active[_ngcontent-ng-c1920592042], .header[_ngcontent-ng-c1920592042] .menu-dropdown[_ngcontent-ng-c1920592042]:hover { color: rgb(184, 222, 228); }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] { background: rgba(0, 0, 0, 0.75); position: fixed; width: 100%; height: calc(100% - 65px); top: 65px; left: 0px; }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] { height: 100%; background: rgb(184, 222, 228); width: 100%; padding: 20px; position: relative; transition: right 0.5s; right: -100%; top: 0px; overflow: hidden auto; }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu.open[_ngcontent-ng-c1920592042] { right: 0px; }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042] { margin-bottom: 20px; padding: 0px; text-align: center; cursor: pointer; text-decoration: none; color: rgb(0, 0, 0); text-transform: capitalize; font-size: 30px !important; }
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042] { display: block; font-size: 46px; font-weight: 600; margin: 0px auto; padding: 10px; }
+}
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] a.white-paper-btn[_ngcontent-ng-c1920592042] { border-bottom: 4px solid rgb(0, 0, 0); padding: 9px 0px; }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] a.active[_ngcontent-ng-c1920592042], .header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042]:hover { background: rgb(184, 222, 228); color: rgb(0, 0, 0); }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] { padding: 10px; margin: 0px; border: 2px solid rgb(184, 222, 228); border-radius: 0px; text-decoration: none; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 400; width: 100% !important; }
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] { display: flex; margin: 0px auto !important; }
+}
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] .dropdown-menu[_ngcontent-ng-c1920592042] li[_ngcontent-ng-c1920592042] { justify-content: center !important; }
+}
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] .dropdown-menu[_ngcontent-ng-c1920592042] { max-height: 258px !important; }
+}
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] .dropdown-menu.show[_ngcontent-ng-c1920592042] { min-width: 100%; inset: -400% auto auto 0px !important; }
+
+@media screen and (max-width: 576px) {
+  .header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .language[_ngcontent-ng-c1920592042] .dropdown-menu.show[_ngcontent-ng-c1920592042] { inset: 80% auto auto 0px !important; }
+}
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .social-icon[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042] { text-decoration: none !important; }
+
+.header[_ngcontent-ng-c1920592042] .menu-overlay[_ngcontent-ng-c1920592042] .sub-menu[_ngcontent-ng-c1920592042] .social-icon[_ngcontent-ng-c1920592042] a[_ngcontent-ng-c1920592042] img[_ngcontent-ng-c1920592042] { width: 40px; height: auto; }
+
+.header[_ngcontent-ng-c1920592042] .buy-mobile-button[_ngcontent-ng-c1920592042] { background-color: rgb(237, 59, 35); color: rgb(255, 255, 255) !important; }
